@@ -1,0 +1,80 @@
+{
+  "_type": "https://in-toto.io/Statement/v0.1",
+  "subject": [
+    {
+      "name": "https://us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0",
+      "digest": {
+        "sha256": "619e4b82435297c7504598f1325e813d12d12088d36ac50faaa8d8717d4a74b1"
+      }
+    }
+  ],
+  "predicateType": "https://slsa.dev/provenance/v0.1",
+  "slsaProvenance": {
+    "builder": {
+      "id": "https://cloudbuild.googleapis.com/GoogleHostedWorker@v0.3"
+    },
+    "recipe": {
+      "type": "https://cloudbuild.googleapis.com/CloudBuildSteps@v0.1",
+      "definedInMaterial": "-1",
+      "arguments": {
+        "@type": "type.googleapis.com/google.devtools.cloudbuild.v1.Build",
+        "id": "0226b528-4435-46f1-a64d-790b711b83a1",
+        "steps": [
+          {
+            "name": "gcr.io/cloud-builders/docker",
+            "args": [
+              "build",
+              "-t",
+              "us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0",
+              "."
+            ],
+            "timing": {
+              "startTime": "2023-03-08T16:28:41.870892274Z",
+              "endTime": "2023-03-08T16:28:43.488563785Z"
+            },
+            "status": "SUCCESS",
+            "pullTiming": {
+              "startTime": "2023-03-08T16:28:41.870892274Z",
+              "endTime": "2023-03-08T16:28:41.876573377Z"
+            }
+          }
+        ],
+        "sourceProvenance": {
+          "resolvedStorageSource": {
+            "bucket": "agmsb-gke-lab_cloudbuild",
+            "object": "source/1678292902.655338-be8bf5e07238443ca4f268a42cb10c92.tgz",
+            "generation": "1678292903302140"
+          },
+          "fileHashes": {
+            "gs://agmsb-gke-lab_cloudbuild/source/1678292902.655338-be8bf5e07238443ca4f268a42cb10c92.tgz#1678292903302140": {
+              "fileHash": [
+                {
+                  "type": "MD5",
+                  "value": "A4GmrUoZqSA1M1cXzg1xfw=="
+                }
+              ]
+            }
+          }
+        },
+        "options": {
+          "logging": "LEGACY",
+          "pool": {}
+        },
+        "name": "projects/568808368043/locations/global/builds/0226b528-4435-46f1-a64d-790b711b83a1"
+      }
+    },
+    "metadata": {
+      "buildInvocationId": "0226b528-4435-46f1-a64d-790b711b83a1",
+      "buildStartedOn": "2023-03-08T16:28:32.036919036Z",
+      "buildFinishedOn": "2023-03-08T16:28:51.021413Z"
+    },
+    "materials": [
+      {
+        "uri": "gs://agmsb-gke-lab_cloudbuild/source/1678292902.655338-be8bf5e07238443ca4f268a42cb10c92.tgz#1678292903302140",
+        "digest": {
+          "md5": "0381a6ad4a19a92035335717ce0d717f"
+        }
+      }
+    ]
+  }
+}
