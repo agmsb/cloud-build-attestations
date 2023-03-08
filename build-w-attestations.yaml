@@ -1,9 +1,5 @@
-# step 1: build docker image
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0', '.' ]
-# - name: 'gcr.io/cloud-builders/docker'
-#  args: ['push', 'us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0']
-# using the images stanza will trigger the creation of an attestation and push the built container image to Artifact Registry
 images:
 - 'us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0'
