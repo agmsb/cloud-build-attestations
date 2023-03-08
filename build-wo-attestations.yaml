@@ -5,5 +5,3 @@ steps:
 # step 2: push docker image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0']
-# images:
-# - 'us-west2-docker.pkg.dev/agmsb-gke-lab/my-container-repo/image:1.0.0'
